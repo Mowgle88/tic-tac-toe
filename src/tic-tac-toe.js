@@ -50,8 +50,29 @@ class TicTacToe {
 
     getWinner() {
 
-        
+        if (this.myField[0][0] === 'x' && this.myField[0][1] === 'x' && this.myField[0][2] === 'x' || 
+            this.myField[1][0] === 'x' && this.myField[1][1] === 'x' && this.myField[1][2] === 'x' ||
+            this.myField[2][0] === 'x' && this.myField[2][1] === 'x' && this.myField[2][2] === 'x' ||
+            this.myField[0][0] === 'x' && this.myField[1][0] === 'x' && this.myField[2][0] === 'x' ||
+            this.myField[0][1] === 'x' && this.myField[1][1] === 'x' && this.myField[2][1] === 'x' ||
+            this.myField[0][2] === 'x' && this.myField[1][2] === 'x' && this.myField[2][2] === 'x' ||
+            this.myField[0][0] === 'x' && this.myField[1][1] === 'x' && this.myField[2][2] === 'x' ||
+            this.myField[0][2] === 'x' && this.myField[1][1] === 'x' && this.myField[2][0] === 'x') {
+            return this.firstPlayer;
+        }
+        if (this.myField[0][0] === 'o' && this.myField[0][1] === 'o' && this.myField[0][2] === 'o' || 
+            this.myField[1][0] === 'o' && this.myField[1][1] === 'o' && this.myField[1][2] === 'o' ||
+            this.myField[2][0] === 'o' && this.myField[2][1] === 'o' && this.myField[2][2] === 'o' ||
+            this.myField[0][0] === 'o' && this.myField[1][0] === 'o' && this.myField[2][0] === 'o' ||
+            this.myField[0][1] === 'o' && this.myField[1][1] === 'o' && this.myField[2][1] === 'o' ||
+            this.myField[0][2] === 'o' && this.myField[1][2] === 'o' && this.myField[2][2] === 'o' ||
+            this.myField[0][0] === 'o' && this.myField[1][1] === 'o' && this.myField[2][2] === 'o' ||
+            this.myField[0][2] === 'o' && this.myField[1][1] === 'o' && this.myField[2][0] === 'o') {
+            return this.secondPlayer;
+        }
 
+        return null;
+        
     }
 
     noMoreTurns() {
