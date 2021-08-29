@@ -21,6 +21,7 @@ function render() {
     }
 
     gameCanvas.innerHTML = html;
+    
 }
 
 render();
